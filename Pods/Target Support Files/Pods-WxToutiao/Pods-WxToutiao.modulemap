@@ -1,0 +1,6 @@
+framework module Pods_WxToutiao {
+  umbrella header "Pods-WxToutiao-umbrella.h"
+
+  export *
+  module * { export * }
+}

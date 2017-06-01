@@ -1,0 +1,6 @@
+framework module LLSwitch {
+  umbrella header "LLSwitch-umbrella.h"
+
+  export *
+  module * { export * }
+}

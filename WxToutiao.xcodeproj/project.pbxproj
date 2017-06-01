@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A139FA4C666C6AA8174777A4 /* Pods_WxToutiao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D4BAA35F1CE935D31A3A99 /* Pods_WxToutiao.framework */; };
 		E4070D0C1ECFEFF900B9F641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4070D0B1ECFEFF900B9F641 /* AppDelegate.swift */; };
 		E4070D0E1ECFEFF900B9F641 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4070D0D1ECFEFF900B9F641 /* ViewController.swift */; };
 		E4070D111ECFEFF900B9F641 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4070D0F1ECFEFF900B9F641 /* Main.storyboard */; };
 		E4070D131ECFEFF900B9F641 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4070D121ECFEFF900B9F641 /* Assets.xcassets */; };
 		E4070D161ECFEFF900B9F641 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4070D141ECFEFF900B9F641 /* LaunchScreen.storyboard */; };
+		E4070D1E1ECFF16400B9F641 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4070D1D1ECFF16400B9F641 /* NetworkService.swift */; };
+		E4070D201ECFF78600B9F641 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4070D1F1ECFF78600B9F641 /* Category.swift */; };
+		E409DADB1ED8285A003EFBD9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409DADA1ED8285A003EFBD9 /* Post.swift */; };
+		E47B48881ED2ACED00F1469A /* NewsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B48871ED2ACED00F1469A /* NewsListController.swift */; };
+		E47B488A1ED2B3AE00F1469A /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B48891ED2B3AE00F1469A /* TextCell.swift */; };
+		E47B488C1ED2B5A400F1469A /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B488B1ED2B5A400F1469A /* DetailController.swift */; };
+		E4A1AD5B1EE0826300EC27EF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A1AD5A1EE0826300EC27EF /* UIColorExtension.swift */; };
+		E4A1AD5D1EE0850800EC27EF /* html2String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A1AD5C1EE0850800EC27EF /* html2String.swift */; };
+		E4A1AD5F1EE0944400EC27EF /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A1AD5E1EE0944400EC27EF /* NotificationHelper.swift */; };
+		E4A1AD611EE09E3A00EC27EF /* scroll.js in Resources */ = {isa = PBXBuildFile; fileRef = E4A1AD601EE09E3A00EC27EF /* scroll.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2519B094176235B1D0DBD2AC /* Pods-WxToutiao.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WxToutiao.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WxToutiao/Pods-WxToutiao.debug.xcconfig"; sourceTree = "<group>"; };
+		78D4BAA35F1CE935D31A3A99 /* Pods_WxToutiao.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WxToutiao.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4070D081ECFEFF900B9F641 /* WxToutiao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WxToutiao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4070D0B1ECFEFF900B9F641 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4070D0D1ECFEFF900B9F641 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +35,18 @@
 		E4070D121ECFEFF900B9F641 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4070D151ECFEFF900B9F641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4070D171ECFEFF900B9F641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4070D1D1ECFF16400B9F641 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E4070D1F1ECFF78600B9F641 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		E409DADA1ED8285A003EFBD9 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E47B48871ED2ACED00F1469A /* NewsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListController.swift; sourceTree = "<group>"; };
+		E47B48891ED2B3AE00F1469A /* TextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		E47B488B1ED2B5A400F1469A /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		E4A1AD571EE07FAA00EC27EF /* WxToutiao-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WxToutiao-Bridging-Header.h"; sourceTree = "<group>"; };
+		E4A1AD5A1EE0826300EC27EF /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		E4A1AD5C1EE0850800EC27EF /* html2String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = html2String.swift; sourceTree = "<group>"; };
+		E4A1AD5E1EE0944400EC27EF /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		E4A1AD601EE09E3A00EC27EF /* scroll.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = scroll.js; sourceTree = "<group>"; };
+		E9C48693417E452505FD2452 /* Pods-WxToutiao.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WxToutiao.release.xcconfig"; path = "Pods/Target Support Files/Pods-WxToutiao/Pods-WxToutiao.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +54,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A139FA4C666C6AA8174777A4 /* Pods_WxToutiao.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26719329393CE5BF6A1DC0E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2519B094176235B1D0DBD2AC /* Pods-WxToutiao.debug.xcconfig */,
+				E9C48693417E452505FD2452 /* Pods-WxToutiao.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A908D0B5FA7979CE8B8ADD13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78D4BAA35F1CE935D31A3A99 /* Pods_WxToutiao.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E4070CFF1ECFEFF900B9F641 = {
 			isa = PBXGroup;
 			children = (
 				E4070D0A1ECFEFF900B9F641 /* WxToutiao */,
 				E4070D091ECFEFF900B9F641 /* Products */,
+				26719329393CE5BF6A1DC0E2 /* Pods */,
+				A908D0B5FA7979CE8B8ADD13 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +101,21 @@
 			children = (
 				E4070D0B1ECFEFF900B9F641 /* AppDelegate.swift */,
 				E4070D0D1ECFEFF900B9F641 /* ViewController.swift */,
+				E4070D1F1ECFF78600B9F641 /* Category.swift */,
+				E409DADA1ED8285A003EFBD9 /* Post.swift */,
+				E4070D1D1ECFF16400B9F641 /* NetworkService.swift */,
 				E4070D0F1ECFEFF900B9F641 /* Main.storyboard */,
+				E4A1AD5C1EE0850800EC27EF /* html2String.swift */,
+				E4A1AD5A1EE0826300EC27EF /* UIColorExtension.swift */,
+				E47B488B1ED2B5A400F1469A /* DetailController.swift */,
+				E4A1AD601EE09E3A00EC27EF /* scroll.js */,
+				E47B48891ED2B3AE00F1469A /* TextCell.swift */,
+				E47B48871ED2ACED00F1469A /* NewsListController.swift */,
+				E4A1AD5E1EE0944400EC27EF /* NotificationHelper.swift */,
 				E4070D121ECFEFF900B9F641 /* Assets.xcassets */,
 				E4070D141ECFEFF900B9F641 /* LaunchScreen.storyboard */,
 				E4070D171ECFEFF900B9F641 /* Info.plist */,
+				E4A1AD571EE07FAA00EC27EF /* WxToutiao-Bridging-Header.h */,
 			);
 			path = WxToutiao;
 			sourceTree = "<group>";
@@ -71,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4070D1A1ECFEFF900B9F641 /* Build configuration list for PBXNativeTarget "WxToutiao" */;
 			buildPhases = (
+				5099EE072E05BB2A44ECC91F /* [CP] Check Pods Manifest.lock */,
 				E4070D041ECFEFF900B9F641 /* Sources */,
 				E4070D051ECFEFF900B9F641 /* Frameworks */,
 				E4070D061ECFEFF900B9F641 /* Resources */,
+				E88700FAD636FBA2AC6C5141 /* [CP] Embed Pods Frameworks */,
+				8AF0DC13DF77A49A7D66645D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +155,7 @@
 				TargetAttributes = {
 					E4070D071ECFEFF900B9F641 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,10 +186,59 @@
 				E4070D161ECFEFF900B9F641 /* LaunchScreen.storyboard in Resources */,
 				E4070D131ECFEFF900B9F641 /* Assets.xcassets in Resources */,
 				E4070D111ECFEFF900B9F641 /* Main.storyboard in Resources */,
+				E4A1AD611EE09E3A00EC27EF /* scroll.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5099EE072E05BB2A44ECC91F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8AF0DC13DF77A49A7D66645D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WxToutiao/Pods-WxToutiao-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E88700FAD636FBA2AC6C5141 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WxToutiao/Pods-WxToutiao-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E4070D041ECFEFF900B9F641 /* Sources */ = {
@@ -137,7 +246,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4070D0E1ECFEFF900B9F641 /* ViewController.swift in Sources */,
+				E47B488C1ED2B5A400F1469A /* DetailController.swift in Sources */,
+				E4A1AD5D1EE0850800EC27EF /* html2String.swift in Sources */,
+				E4070D1E1ECFF16400B9F641 /* NetworkService.swift in Sources */,
+				E409DADB1ED8285A003EFBD9 /* Post.swift in Sources */,
 				E4070D0C1ECFEFF900B9F641 /* AppDelegate.swift in Sources */,
+				E4A1AD5B1EE0826300EC27EF /* UIColorExtension.swift in Sources */,
+				E4070D201ECFF78600B9F641 /* Category.swift in Sources */,
+				E47B488A1ED2B3AE00F1469A /* TextCell.swift in Sources */,
+				E47B48881ED2ACED00F1469A /* NewsListController.swift in Sources */,
+				E4A1AD5F1EE0944400EC27EF /* NotificationHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,24 +376,31 @@
 		};
 		E4070D1B1ECFEFF900B9F641 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2519B094176235B1D0DBD2AC /* Pods-WxToutiao.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WxToutiao/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoboswift.WxToutiao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WxToutiao/WxToutiao-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		E4070D1C1ECFEFF900B9F641 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9C48693417E452505FD2452 /* Pods-WxToutiao.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WxToutiao/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoboswift.WxToutiao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WxToutiao/WxToutiao-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -299,6 +424,7 @@
 				E4070D1C1ECFEFF900B9F641 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
