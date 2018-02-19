@@ -7,39 +7,18 @@
 //
 
 import Foundation
-import ObjectMapper
 import Moya
 
-struct CategoryIndexResponse: Mappable {
-    var status : String!
-    var count : Int!
+struct CategoryIndexResponse: Codable {
+    var status = ""
+    var count = 0
     var categories : [Category]!
-    
-    init?(map: Map) {
-        
-    }
-    
-    mutating func mapping(map: Map) {
-        status <- map["status"]
-        count <- map["count"]
-        categories <- map["categories"]
-    }
 }
 
-struct Category: Mappable {
-    var id : Int!
-    var title : String!
-    var count : Int!
+struct Category: Codable {
+    var id = 0
+    var title = ""
     
-    init?(map: Map) {
-        
-    }
-    
-    mutating func mapping(map: Map) {
-        id <- map["id"]
-        title <- map["title"]
-        count <- map["post_count"]
-    }
 }
 
 
@@ -51,16 +30,30 @@ extension Category {
         let provider = MoyaProvider<NetworkService>()
         
         
+        
         provider.request(.category) { (result) in
             switch result {
             case let .success(moyaResponse):
-                let json = try! moyaResponse.mapJSON() as! [String:Any]
                 
-                if let jsonResponse = CategoryIndexResponse(JSON: json) {
+                do {
+                    let decoder = JSONDecoder()
+                    
+                    let catesIndexResponse = try decoder.decode(CategoryIndexResponse.self, from: moyaResponse.data)
+                        
+                    print("目录json",catesIndexResponse)
+                    completion(catesIndexResponse.categories)
 
-                    completion(jsonResponse.categories)
-
+                } catch  {
+                    print("目录json解析错误:",error)
                 }
+                
+//                let json = try! moyaResponse.mapJSON() as! [String:Any]
+//
+//                if let jsonResponse = CategoryIndexResponse(JSON: json) {
+//
+//                    completion(jsonResponse.categories)
+//
+//                }
                 
             case .failure:
                 print("网络错误")

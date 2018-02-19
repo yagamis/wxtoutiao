@@ -1,16 +1,15 @@
 PODS:
-  - Alamofire (4.4.0)
-  - IQKeyboardManager (4.0.10)
+  - Alamofire (4.6.0)
+  - IQKeyboardManager (5.0.7)
   - LeoDanmakuKit (1.0.1)
-  - LLSwitch (1.0.4)
-  - Moya (8.0.5):
-    - Moya/Core (= 8.0.5)
-  - Moya/Core (8.0.5):
+  - LLSwitch (1.0.5)
+  - Moya (11.0.0):
+    - Moya/Core (= 11.0.0)
+  - Moya/Core (11.0.0):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
-  - ObjectMapper (2.2.7)
   - PageMenu (2.0.0)
-  - Result (3.2.3)
+  - Result (3.2.4)
   - WZLBadge (1.2.6)
 
 DEPENDENCIES:
@@ -18,21 +17,19 @@ DEPENDENCIES:
   - LeoDanmakuKit
   - LLSwitch
   - Moya
-  - ObjectMapper
   - PageMenu
   - WZLBadge
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  IQKeyboardManager: 593ee99b88381f4b9ccb22bd680f22606351bd41
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  IQKeyboardManager: 0bfa4607d39924116b5c0c8b55b5d789288b5cba
   LeoDanmakuKit: d905bf4ba6c47c5e690796f2581e7934c22cdb83
-  LLSwitch: b5f0e574b4c53f46806df015cd21285464d4b440
-  Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
-  ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
+  LLSwitch: d8b7098fd15f70099b989aa70d15aff8176578d5
+  Moya: be29766339783963a70d1279d69c891ab3a1393c
   PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
-  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   WZLBadge: 9ec779dcfd94c825518b395e8315fccaabff1bfa
 
-PODFILE CHECKSUM: 7df89fb1967402d2c2e3da663535608990d413c3
+PODFILE CHECKSUM: e42d05479961a05f90db0b4da642cc27cf25bb57
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.4.0

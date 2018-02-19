@@ -8,77 +8,32 @@
 //
 
 import Foundation
-import ObjectMapper
 import Moya
 
-struct PostIndexResponse: Mappable {
-    var status : String!
-    var count : Int!
+struct PostIndexResponse: Codable {
+    var status = ""
+    var count : Int?
     var posts : [Post]!
-    
-    init?(map: Map) {
-        
-    }
-    
-    mutating func mapping(map: Map) {
-        status <- map["status"]
-        count <- map["count"]
-        posts <- map["posts"]
-    }
 }
 
-struct SubmitResponse: Mappable {
-    var status : String!
-    
-    
-    init?(map: Map) {
-        
-    }
-    
-    mutating func mapping(map: Map) {
-        status <- map["status"]
-    }
+struct SubmitResponse: Codable {
+    var status = ""
 }
 
-struct Comment: Mappable {
-    var name: String!
-    var content: String!
-    
-    init?(map: Map) {
-        
-    }
-    
-    mutating func mapping(map: Map) {
-        content <- map["content"]
-        name <- map["name"]
-    }
+struct Comment: Codable {
+    var name = ""
+    var content = ""
+
 }
 
-
-
-struct Post: Mappable {
-    var id : Int!
-    var title : String!
+struct Post: Codable {
+    var id = 0
+    var title = ""
     
-    var content : String!
-    var url : String!
-    var comment_count : Int!
+    var content = ""
+    var url = ""
+    var comment_count = 0
     var comments: [Comment]!
-    
-    init?(map: Map) {
-        
-    }
-    
-    mutating func mapping(map: Map) {
-        id <- map["id"]
-        title <- map["title"]
-        
-        content <- map["content"]
-        url <- map["url"]
-        comment_count <- map["comment_count"]
-        comments <- map["comments"]
-
-    }
 }
 
 
@@ -93,11 +48,22 @@ extension Post {
         provider.request(.showCateNewsList(id: id)) { (result) in
             switch result {
             case let .success(moyaResponse):
-                let json = try! moyaResponse.mapJSON() as! [String:Any]
                 
-                if let jsonResponse = PostIndexResponse(JSON: json) {
-                    completion(jsonResponse.posts)
+                do {
+                    let decoder = JSONDecoder()
+                    
+                    let postIndexResponse = try decoder.decode(PostIndexResponse.self, from: moyaResponse.data)
+                    print("文章列表json:", postIndexResponse)
+                    completion(postIndexResponse.posts)
+                } catch  {
+                    print("文章列表json解析错误：",error)
                 }
+                
+//                let json = try! moyaResponse.mapJSON() as! [String:Any]
+//
+//                if let jsonResponse = PostIndexResponse(JSON: json) {
+//                    completion(jsonResponse.posts)
+//                }
                 
             case .failure:
                 print("网络错误")
@@ -115,16 +81,25 @@ extension Post {
         provider.request(.submitComment(postId: postId, name: name, email: email, content: content)) { (result) in
             switch result {
             case let .success(moyaResponse):
-                let json = try! moyaResponse.mapJSON() as! [String:Any]
                 
-                if let jsonResponse = SubmitResponse(JSON: json) {
+                do {
+                    let decoder = JSONDecoder()
                     
-                    if jsonResponse.status == "ok" {
+                    let submitResponse = try decoder.decode(SubmitResponse.self, from: moyaResponse.data)
+                    print("提交评论json:", submitResponse)
+                    
+                    if submitResponse.status == "ok" {
                         completion(true)
                     } else {
                         completion(false)
                     }
+                    
+                   
+                } catch  {
+                    print("json解析错误",error)
                 }
+                
+                
                 
             case .failure:
                 print("网络错误")

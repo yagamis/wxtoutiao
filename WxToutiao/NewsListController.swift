@@ -31,6 +31,7 @@ class NewsListController: UITableViewController {
     }
     
     func getData()  {
+        
         Post.request(id: id) { (posts) in
             if let posts = posts {
                 
@@ -68,7 +69,7 @@ class NewsListController: UITableViewController {
         let news = newsList[indexPath.row]
         
         cell.titleLabel.text = news.title
-        cell.commentLabel.text = "评论：\(news.comment_count!)"
+        cell.commentLabel.text = "评论：\(news.comment_count)"
 
         return cell
     }

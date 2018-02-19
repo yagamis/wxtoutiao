@@ -16,8 +16,16 @@ enum NetworkService {
 }
 
 extension NetworkService: TargetType {
+    var headers: [String : String]? {
+        return ["Content-type": "application/json"]
+    }
+    
+
+    
+    
+    
     var baseURL: URL {
-        let baseUrl = "http://localhost:8888/wordpress/api"
+        let baseUrl = "http://blog.xiaoboswift.com/api"
         return URL(string: baseUrl)!
     }
     
@@ -40,24 +48,6 @@ extension NetworkService: TargetType {
         }
     }
     
-    var parameters: [String : Any]? {
-        switch self {
-        case .category:
-            return nil
-        case .showCateNewsList(let id):
-            return ["id" : id]
-        case .submitComment(let postId, let name, let email, let content):
-            return ["post_id": postId, "name": name, "email": email, "content": content]
-        }
-        
-    }
-    
-    var parameterEncoding: ParameterEncoding {
-        switch self {
-        case .category, .showCateNewsList, .submitComment:
-            return URLEncoding.default
-        }
-    }
     
     var sampleData: Data {
         switch self {
@@ -68,13 +58,16 @@ extension NetworkService: TargetType {
        case .submitComment(let postId, let name, let email, let content):
             return "\(postId),\(name),\(email),\(content)".utf8Encoded
         }
-        
     }
     
     var task: Task {
         switch self {
-        case .category, .showCateNewsList, .submitComment:
-            return .request
+        case .category:
+            return .requestPlain
+        case .showCateNewsList(let id):
+            return .requestParameters(parameters: ["id" : id], encoding: URLEncoding.queryString)
+        case .submitComment(let postId, let name, let email, let content):
+            return .requestParameters(parameters: ["post_id": postId, "name": name, "email": email, "content": content], encoding: URLEncoding.queryString)
         }
     }
     

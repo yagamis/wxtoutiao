@@ -173,7 +173,7 @@ class DetailController: UIViewController,LLSwitchDelegate {
         var result = ""
         
         for comment in comments {
-            let paragraph = "<p> <h6>\(comment.name!)</h6> <h5>\(comment.content!)</h5> <hr size=1>  </p>"
+            let paragraph = "<p> <h6>\(comment.name)</h6> <h5>\(comment.content)</h5> <hr size=1>  </p>"
             result += paragraph
         }
         

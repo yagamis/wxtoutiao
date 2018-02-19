@@ -7,7 +7,6 @@ target 'WxToutiao' do
 
   # Pods for WxToutiao
   pod 'Moya'
-  pod 'ObjectMapper'
   pod 'PageMenu'
   pod 'IQKeyboardManager'
   pod "LeoDanmakuKit"
